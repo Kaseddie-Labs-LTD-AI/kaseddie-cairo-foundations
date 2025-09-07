@@ -1,0 +1,11 @@
+[package]
+name = "kaseddie_balance_contract"
+version = "0.1.0"
+description = "A Starknet Cairo contract for managing balances."
+edition = "2023_10"
+
+[dependencies]
+starknet = ">=2.0.0"
+
+[tool.scarb]
+cairo-version = "2.12.1"
