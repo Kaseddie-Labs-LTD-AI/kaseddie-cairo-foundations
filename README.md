@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-"# Binance_Trading_Bot" 
-"# Binance_Trading_Bot" 
-"# Binance_Trading_Bot" 
-=======
 Kaseddie Cairo Foundations
 This repository documents my journey of rebuilding the on-chain components for Kaseddie AI from the ground up.
 
@@ -18,4 +13,3 @@ Thank you for following along.
 
 Eddie Kasamba Wahitu Founder, 
 Kaseddie Labs LTD
->>>>>>> 1accda2d448d2807ba04824471c24f5c1ec716aa
