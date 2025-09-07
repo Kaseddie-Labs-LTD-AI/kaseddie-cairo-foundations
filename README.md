@@ -1,4 +1,5 @@
 Kaseddie Cairo Foundations
+
 This repository documents my journey of rebuilding the on-chain components for Kaseddie AI from the ground up.
 
 The Goal
