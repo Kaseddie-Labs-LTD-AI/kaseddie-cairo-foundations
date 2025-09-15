@@ -1,17 +1,83 @@
 Kaseddie Cairo Foundations
 
-This repository documents my journey of rebuilding the on-chain components for Kaseddie AI from the ground up.
+This repository documents my journey of rebuilding the on-chain components for Kaseddie AI from the ground up. Each contract is designed for correctness, security, and best practices, not complexity or speed. The goal is to establish a rock-solid foundation for the next, production-ready version of the Kaseddie AI platform.
 
-The Goal
-Inspired by direct feedback from the Starknet Foundation, the purpose of this repository is to build a strong, foundational understanding of Cairo and Starknet development. The focus here is not on speed or complexity, but on correctness, security, and best practices.
+   Table of Contents
 
-Each contract will be simple, well-tested, and built with a deep understanding of its function.
+- Overview  
+- Goals  
+- Repository Structure  
+- Getting Started  
+- Running Tests  
+- Roadmap  
+- Contributing  
+- License  
+- Author  
 
-The Journey
-I am building this in public to share my learnings and contribute to the Starknet ecosystem. This repository will serve as the foundation for the next, production-ready version of the Kaseddie AI platform.
+   Overview
 
-Thank you for following along.
+Inspired by feedback from the Starknet Foundation, this repo is built in public to:
 
-Eddie Kasamba Wahitu Founder, 
+- Deepen my understanding of Cairo and Starknet development  
+- Showcase simple, well-tested contracts  
+- Share learnings and contribute back to the ecosystem  
 
-Kaseddie Labs LTD
+Every contract here is accompanied by a full test suite demonstrating both happy paths and revert scenarios.
+
+    Goals
+
+- Establish a minimal, auditable codebase for core on-chain logic  
+- Enforce best practices for security and maintainability  
+- Cultivate reproducible test environments and CI-ready workflows  
+- Serve as the foundation for Kaseddie AI’s production launch
+
+    Repository Structure
+- cairo-contracts/ ├─ src/ │  └─ user_vault.cairo ├─ tests/ │  └─ uservault_test.cairo ├─ Scarb.toml ├─ README.md └─ .gitignore
+
+     Getting Started
+
+  Prerequisites  
+- WSL2 or Linux/macOS  
+- Cairo 1.x toolchain & Rust  
+- Scarb (Cairo package manager)  
+- Starknet Foundry (snforge) v0.49.0  
+
+    Steps  
+1. Clone the repo  
+   `git clone https://github.com/Kaseddie-Labs-LTD-AI/kaseddie-cairo-foundations.git`  
+2. Install deps  
+   `cd cairo-contracts && scarb install`  
+3. Build contracts  
+   `scarb build`
+
+Running Tests
+
+From the `cairo-contracts/` folder run:  
+- snforge test
+You should see all seven tests pass, covering both success and revert cases.
+
+ Roadmap
+
+- [x] Basic deposit/withdraw vault contract  
+- [x] Full integration tests (happy & revert paths)  
+- [ ] Coverage reporting and CI integration  
+- [ ] Additional utility contracts (multi-sig, timelock)  
+- [ ] Production-grade auditing and optimizations
+
+ Contributing
+
+I’m building in public—your bug reports and PRs are welcome!  
+1. Fork  
+2. Branch (`git checkout -b feature/...`)  
+3. Commit & push  
+4. Open a PR  
+
+ License
+
+MIT
+
+ Author
+
+Eddie Kasamba Wahitu 
+Founder,
+ Kaseddie Labs LTD
