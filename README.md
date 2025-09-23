@@ -3,80 +3,78 @@ RADME.md
 
 This repository documents my journey of rebuilding the on-chain components for Kaseddie AI from the ground up. Each contract is designed for correctness, security, and best practices, not complexity or speed. The goal is to establish a rock-solid foundation for the next, production-ready version of the Kaseddie AI platform.
 
-## Table of Contents
+A secure, production-ready foundation for Kaseddie AI's Web3 components, built on Cairo/Starknet with a React/TypeScript frontend. Developed in public with best practices.
 
-- Overview  
-- Goals  
-- Repository Structure  
-- Getting Started  
-- Running Tests  
-- Roadmap  
-- Contributing  
-- License  
-- Author  
+## Project Structure
+- `cairo-contracts/`: Starknet smart contracts (e.g., `UserVault`) built with Cairo.
+- `frontend/`: Vite + React + TypeScript app for user interaction with contracts.
 
-##  Overview
+## Backend Setup (cairo-contracts)
+### Prerequisites
+- Rust (latest stable)
+- Scarb (v2.8.2 or later)
+- Snforge (latest)
+- Starknet Foundry
 
-Inspired by feedback from the Starknet Foundation, this repo is built in public to:
+### Getting Started
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/Kaseddie-Labs-LTD-AI/kaseddie-cairo-foundations.git
+   cd kaseddie-cairo-foundations
 
-- Deepen my understanding of Cairo and Starknet development  
-- Showcase simple, well-tested contracts  
-- Share learnings and contribute back to the ecosystem  
+Install dependencies:
+bashcd cairo-contracts
+scarb install
 
-Every contract here is accompanied by a full test suite demonstrating both happy paths and revert scenarios.
+Build contracts:
+bashscarb build
 
-##  Goals
+Run tests:
+bashsnforge test
 
-- Establish a minimal, auditable codebase for core on-chain logic  
-- Enforce best practices for security and maintainability  
-- Cultivate reproducible test environments and CI-ready workflows  
-- Serve as the foundation for Kaseddie AI’s production launch
 
-##  Repository Structure
-- cairo-contracts/ ├─ src/ │  └─ user_vault.cairo ├─ tests/ │  └─ uservault_test.cairo ├─ Scarb.toml ├─ README.md └─ .gitignore
+Frontend Setup
+Prerequisites
 
-##  Getting Started
+Node.js (v18+)
+npm (v9+)
 
-**Prerequisites**  
-- WSL2 or Linux/macOS  
-- Cairo 1.x toolchain & Rust  
-- Scarb (Cairo package manager)  
-- Starknet Foundry (snforge) v0.49.0  
+Getting Started
 
-**Steps**  
-1. Clone the repo  
-   `git clone https://github.com/Kaseddie-Labs-LTD-AI/kaseddie-cairo-foundations.git`  
-2. Install deps  
-   `cd cairo-contracts && scarb install`  
-3. Build contracts  
-   `scarb build`
+Navigate to frontend:
+bashcd frontend
 
-**Running Tests**
+Install dependencies:
+bashnpm install
 
-From the `cairo-contracts/` folder run:  
-- snforge test
-You should see all seven tests pass, covering both success and revert cases.
+Copy contract ABIs:
+bashnpm run copy-abis
 
-**Roadmap**
+Run dev server:
+bashnpm run dev
 
-- [x] Basic deposit/withdraw vault contract  
-- [x] Full integration tests (happy & revert paths)  
-- [ ] Coverage reporting and CI integration  
-- [ ] Additional utility contracts (multi-sig, timelock)  
-- [ ] Production-grade auditing and optimizations
+Build for production:
+bashnpm run build
 
-## Contributing
 
-I’m building in public—your bug reports and PRs are welcome!  
-1. Fork  
-2. Branch (`git checkout -b feature/...`)  
-3. Commit & push  
-4. Open a PR  
+Key Frontend Files
 
-## License
+src/utils/provider.ts: React context provider for app state.
+src/hooks/useUserVault.ts: Hook for interacting with UserVault contract.
+Components: KycForm.tsx, DepositForm.tsx, WithdrawForm.tsx, StrategyButton.tsx, BalanceDisplay.tsx.
 
+Starknet Integration
+
+Uses @starknet-react/core (v3.0.0) for frontend-contract interactions.
+Placeholder: Set REACT_APP_VAULT_ADDRESS in frontend/.env for contract address post-deployment.
+
+Contributing
+
+Follow Cairo and React best practices.
+Use Devdock for AI-assisted debugging and Web3 rewards (requires GitHub repo connection).
+
+License
 MIT
-
 ## Author
 
 Eddie Kasamba Wahitu 
