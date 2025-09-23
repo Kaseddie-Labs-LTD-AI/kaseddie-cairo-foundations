@@ -1,0 +1,1 @@
+{"version":1,"contracts":[{"id":"r0djmcjrkcmh8","package_name":"kaseddie_cairo_foundations","contract_name":"UserVault","module_path":"kaseddie_cairo_foundations::user_vault::UserVault","artifacts":{"sierra":"uservault_UserVault.contract_class.json","casm":"uservault_UserVault.compiled_contract_class.json"}}]}
