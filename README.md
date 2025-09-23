@@ -23,14 +23,14 @@ A secure, production-ready foundation for Kaseddie AI's Web3 components, built o
    cd kaseddie-cairo-foundations
 
 Install dependencies:
-bashcd cairo-contracts
+bash cd cairo-contracts
 scarb install
 
 Build contracts:
-bashscarb build
+bash scarb build
 
 Run tests:
-bashsnforge test
+bash snforge test
 
 
 Frontend Setup
@@ -42,19 +42,19 @@ npm (v9+)
 Getting Started
 
 Navigate to frontend:
-bashcd frontend
+bash cd frontend
 
 Install dependencies:
-bashnpm install
+bash npm install
 
 Copy contract ABIs:
-bashnpm run copy-abis
+bash npm run copy-abis
 
 Run dev server:
-bashnpm run dev
+bash npm run dev
 
 Build for production:
-bashnpm run build
+bash npm run build
 
 
 Key Frontend Files
@@ -77,6 +77,6 @@ License
 MIT
 ## Author
 
-Eddie Kasamba Wahitu 
-Founder,
- Kaseddie Labs LTD
+## Eddie Kasamba Wahitu 
+## Founder,
+## Kaseddie Labs LTD
