@@ -5,6 +5,30 @@ This repository documents my journey of rebuilding the on-chain components for K
 
 A secure, production-ready foundation for Kaseddie AI's Web3 components, built on Cairo/Starknet with a React/TypeScript frontend. Developed in public with best practices.
 
+## Table of Contents
+Project Overview
+Features
+Prerequisites
+Setup Instructions
+Contract Details
+Testing
+Deploying to Sepolia
+
+## Project Overview
+This project is a hands-on exploration of Starknet smart contract development using Cairo. It includes:
+A UserVault contract for managing user deposits, withdrawals, KYC verification, and strategy activation. 
+Unit tests using Snforge to ensure contract functionality.
+Deployment scripts using Starkli for the Starknet Sepolia testnet.
+
+## Features
+UserVault Contract:
+. Deposit and withdraw funds (tracked as u256).
+. KYC verification for users (owner-only).
+. Strategy activation for verified users.
+. Event emission for deposits, withdrawals, verifications, and strategy activations.
+. Testing: Comprehensive Snforge tests covering deposits, withdrawals, KYC, and access control.
+. Deployment: Deployed to Starknet Sepolia testnet using Starkli.
+
 ## Project Structure
 - `cairo-contracts/`: Starknet smart contracts (e.g., `UserVault`) built with Cairo.
 - `frontend/`: Vite + React + TypeScript app for user interaction with contracts.
@@ -15,6 +39,8 @@ A secure, production-ready foundation for Kaseddie AI's Web3 components, built o
 - Scarb (v2.8.2 or later)
 - Snforge (latest)
 - Starknet Foundry
+- Starkli (>=0.2.5) for Starknet interactions.
+- Starknet Account: Funded with Sepolia ETH/STRK (via Starknet Faucet or StarkGate).
 
 ### Getting Started
 1. Clone the repo:
@@ -56,6 +82,11 @@ bash npm run dev
 Build for production:
 bash npm run build
 
+Starkli:
+
+curl https://get.starkli.sh | sh
+echo 'export PATH="$HOME/.starkli/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
 
 Key Frontend Files
 
